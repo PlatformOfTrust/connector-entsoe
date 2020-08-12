@@ -46,6 +46,18 @@ docker run -p 8080:8080 -d konsta2106/entsoe-electricity-price
 
 ```
 docker run -e CONFIGS -p 8080:8080 -d konsta2106/entsoe-electricity-price
-```
 
+```
+## Request body example
+
+```
+{
+  "timestamp": "2020-05-25T13:02:13.142Z",
+  "productCode": "entsoe-electricity-price-product-code",
+  "parameters": {
+    "period": "2020-06-08T13:00Z/2020-06-09T22:00Z",
+    "targetObject": "10YFI-1--------U"
+  }
+}
+```
 

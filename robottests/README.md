@@ -1,4 +1,4 @@
-# Signspace connector tests
+# Entsoe connector tests
 
 ## System requirements
 
@@ -25,7 +25,7 @@ router.post('', ctrl.fetch);
 Run connector locally from Dockerfile or with:
 
     npm start
-... don't forget to pass SignSpace credentails with $CONFIGS env variable.
+... don't forget to pass Entsoe credentails with $CONFIGS env variable.
 
 Navigate to /robottests directory and start test suite:
 

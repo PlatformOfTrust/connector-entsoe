@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.5 on darwin)" generated="20200817 19:03:24.094" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.5 on darwin)" generated="20200831 09:28:41.431" rpa="false">
 <suite id="s1" name="Connector Tests" source="/Users/konstantinkomovits/PoT/connector-entsoe/robottests/connector_tests.robot">
 <test id="s1-t1" name="fetch, 200">
 <kw name="Get Body">
@@ -15,8 +15,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.681" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.680" endtime="20200817 19:03:24.681"></status>
+<msg timestamp="20200831 09:28:41.861" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:41.861" endtime="20200831 09:28:41.861"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -27,8 +27,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.681" level="INFO">${now} = 2020-08-17T16:03:24+00:00</msg>
-<status status="PASS" starttime="20200817 19:03:24.681" endtime="20200817 19:03:24.681"></status>
+<msg timestamp="20200831 09:28:41.862" level="INFO">${now} = 2020-08-31T06:28:41+00:00</msg>
+<status status="PASS" starttime="20200831 09:28:41.861" endtime="20200831 09:28:41.862"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -37,7 +37,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.681" endtime="20200817 19:03:24.681"></status>
+<status status="PASS" starttime="20200831 09:28:41.862" endtime="20200831 09:28:41.862"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -45,7 +45,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.682" endtime="20200817 19:03:24.682"></status>
+<status status="PASS" starttime="20200831 09:28:41.862" endtime="20200831 09:28:41.862"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -56,11 +56,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.682" level="INFO">${json_string} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.682" endtime="20200817 19:03:24.682"></status>
+<msg timestamp="20200831 09:28:41.863" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:41+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:41.862" endtime="20200831 09:28:41.863"></status>
 </kw>
-<msg timestamp="20200817 19:03:24.682" level="INFO">${body} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.680" endtime="20200817 19:03:24.683"></status>
+<msg timestamp="20200831 09:28:41.863" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:41+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:41.860" endtime="20200831 09:28:41.863"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -74,9 +74,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.683" level="INFO">oFJpDPNtoPRAfee/5qlmRpOshRiGTGYy9uFClBVzQ40=</msg>
-<msg timestamp="20200817 19:03:24.683" level="INFO">${signature} = oFJpDPNtoPRAfee/5qlmRpOshRiGTGYy9uFClBVzQ40=</msg>
-<status status="PASS" starttime="20200817 19:03:24.683" endtime="20200817 19:03:24.683"></status>
+<msg timestamp="20200831 09:28:41.864" level="INFO">i8LkOvV3ri0Wbo7S7H4n8y87Pi8cPgBDH7Fkcz1B3O0=</msg>
+<msg timestamp="20200831 09:28:41.864" level="INFO">${signature} = i8LkOvV3ri0Wbo7S7H4n8y87Pi8cPgBDH7Fkcz1B3O0=</msg>
+<status status="PASS" starttime="20200831 09:28:41.864" endtime="20200831 09:28:41.864"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -86,7 +86,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.683" endtime="20200817 19:03:24.684"></status>
+<status status="PASS" starttime="20200831 09:28:41.864" endtime="20200831 09:28:41.864"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -97,12 +97,541 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<msg timestamp="20200817 19:03:24.748" level="FAIL">KeyError: 'content-type'</msg>
-<status status="FAIL" starttime="20200817 19:03:24.684" endtime="20200817 19:03:24.748"></status>
+<status status="PASS" starttime="20200831 09:28:41.864" endtime="20200831 09:28:42.223"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.683" endtime="20200817 19:03:24.748"></status>
+<kw name="Output Schema" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON Schema to terminal or a file.*</doc>
+<arguments>
+<arg>response body</arg>
+</arguments>
+<msg timestamp="20200831 09:28:42.224" level="INFO">
+{
+    "type": "object",
+    "properties": {
+        "@context": {
+            "type": "string",
+            "default": "https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "forecasts": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "@type": {
+                                "type": "string"
+                            },
+                            "period": {
+                                "type": "string"
+                            },
+                            "pricePlans": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "@type": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "period": {
+                                            "type": "string"
+                                        },
+                                        "rate": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "required": [
+                                        "@type",
+                                        "currency",
+                                        "period",
+                                        "rate"
+                                    ]
+                                }
+                            }
+                        },
+                        "required": [
+                            "@type",
+                            "period",
+                            "pricePlans"
+                        ]
+                    },
+                    "default": [
+                        {
+                            "@type": "ForecastElectricityPriceMWH",
+                            "period": "07.06.2020/09.06.2020",
+                            "pricePlans": [
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "07.06.2020T22:00/1h",
+                                    "rate": 3.68
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "07.06.2020T23:00/1h",
+                                    "rate": 2.85
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T00:00/1h",
+                                    "rate": 2.95
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T01:00/1h",
+                                    "rate": 3.15
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T02:00/1h",
+                                    "rate": 4.58
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T03:00/1h",
+                                    "rate": 7.06
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T04:00/1h",
+                                    "rate": 32.65
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T05:00/1h",
+                                    "rate": 42.95
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T06:00/1h",
+                                    "rate": 41.24
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T07:00/1h",
+                                    "rate": 38.9
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T08:00/1h",
+                                    "rate": 35.1
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T09:00/1h",
+                                    "rate": 35.86
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T10:00/1h",
+                                    "rate": 33.81
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T11:00/1h",
+                                    "rate": 32.72
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T12:00/1h",
+                                    "rate": 30.94
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T13:00/1h",
+                                    "rate": 30
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T14:00/1h",
+                                    "rate": 29.42
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T15:00/1h",
+                                    "rate": 33.31
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T16:00/1h",
+                                    "rate": 38.85
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T17:00/1h",
+                                    "rate": 38.65
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T18:00/1h",
+                                    "rate": 35.23
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T19:00/1h",
+                                    "rate": 34.6
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T20:00/1h",
+                                    "rate": 32.26
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T21:00/1h",
+                                    "rate": 11.04
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T22:00/1h",
+                                    "rate": 5.33
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T23:00/1h",
+                                    "rate": 3.81
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T00:00/1h",
+                                    "rate": 3.34
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T01:00/1h",
+                                    "rate": 3.11
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T02:00/1h",
+                                    "rate": 3.64
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T03:00/1h",
+                                    "rate": 7.21
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T04:00/1h",
+                                    "rate": 33.43
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T05:00/1h",
+                                    "rate": 47.74
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T06:00/1h",
+                                    "rate": 55.78
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T07:00/1h",
+                                    "rate": 55.67
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T08:00/1h",
+                                    "rate": 54.6
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T09:00/1h",
+                                    "rate": 55.23
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T10:00/1h",
+                                    "rate": 55.27
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T11:00/1h",
+                                    "rate": 40.07
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T12:00/1h",
+                                    "rate": 36.39
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T13:00/1h",
+                                    "rate": 33.49
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T14:00/1h",
+                                    "rate": 33.76
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T15:00/1h",
+                                    "rate": 41.61
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T16:00/1h",
+                                    "rate": 45.21
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T17:00/1h",
+                                    "rate": 48.07
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T18:00/1h",
+                                    "rate": 42.06
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T19:00/1h",
+                                    "rate": 36.57
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T20:00/1h",
+                                    "rate": 18.97
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T21:00/1h",
+                                    "rate": 8.38
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "forecasts"
+            ]
+        },
+        "signature": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "default": "RsaSignature2018"
+                },
+                "created": {
+                    "type": "string",
+                    "default": "2020-08-31T09:28:42+03:00"
+                },
+                "creator": {
+                    "type": "string",
+                    "default": "http://localhost:8080/entsoe/translator/v1/public.key"
+                },
+                "signatureValue": {
+                    "type": "string",
+                    "default": "R56cch1tFNAJ+yAiy1OpUZdCBHfNb+HfvH894ftgWYuCUVm7LoNo/S5HKBzN+mLJMsipxWBz30Z63nTz54SFx0m7rNqK004tNdUuf2PAeJuXi/5vvcD0D7qBKfcEhMDnud4cFGDbuw7/EjHL4R/+rC1k5yo1aIXyPFgaOGk7mWa+fWoK/cDjjW7Eipwfd7Ax+nMn8/CDl85v+OjtG9UBFgpdF6j9m3jVEbp3aWhcKxRpmr010LgV+PZoHqgyyC7nJRXr98++aE/PwUPmHj1rVOE/hAEUcqBDTXivBahMAyVXm7VYnKEYxXXjEwLHSDDaK2tERGw2zqB135kAfUE9EITeFEmMI4AVbazZmMpoUj7SIb8vEqT/lQMHQHIdzpuLZpqhTm8NGC8ES0Vx6Zc+O57LgcSQlegDGLtbXg3Zsv+UvKx2/4onPnHaus/OliQPtNpOTGIg3rKZnEXoLuCsTkZ27TcV1m/vj8D+S4ygJem6bWEBC5iLEBvT5mfcaxF5ZjrOIF4Le/6VhzQD7e7Q2CIziL6X+SG3vD7nnW0IKE7hJBV1YTnq0Zt67HYcz31csaVYUyOtea9gUTklIW1oRVykFAv3Kg6ZssofcTtmQK8Vg9GFdKH+6MZofKSeQooFqi95NTEywgC1mnLMSXIc8XImKuA19hgpBsVZ418SG04="
+                }
+            },
+            "required": [
+                "created",
+                "creator",
+                "signatureValue",
+                "type"
+            ]
+        }
+    },
+    "required": [
+        "@context",
+        "data",
+        "signature"
+    ]
+}</msg>
+<status status="PASS" starttime="20200831 09:28:42.223" endtime="20200831 09:28:42.239"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.679" endtime="20200817 19:03:24.749" critical="yes">KeyError: 'content-type'</status>
+<status status="PASS" starttime="20200831 09:28:41.863" endtime="20200831 09:28:42.239"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.240" endtime="20200831 09:28:42.240"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body @context</arg>
+<arg>https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.241" endtime="20200831 09:28:42.241"></status>
+</kw>
+<kw name="Object" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON object.*</doc>
+<arguments>
+<arg>response body data</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.241" endtime="20200831 09:28:42.243"></status>
+</kw>
+<kw name="Array" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON array.*</doc>
+<arguments>
+<arg>response body data forecasts</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.243" endtime="20200831 09:28:42.245"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 @type</arg>
+<arg>ForecastElectricityPriceMWH</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.245" endtime="20200831 09:28:42.246"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 period</arg>
+<arg>07.06.2020/09.06.2020</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.246" endtime="20200831 09:28:42.247"></status>
+</kw>
+<kw name="Array" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON array.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.247" endtime="20200831 09:28:42.250"></status>
+</kw>
+<kw name="Object" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON object.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0</arg>
+<arg>{"@type": "pricePlan","currency": "EUR","period": "07.06.2020T22:00/1h","rate": 3.68}</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.250" endtime="20200831 09:28:42.251"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 @type</arg>
+<arg>pricePlan</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.252" endtime="20200831 09:28:42.252"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 currency</arg>
+<arg>EUR</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.253" endtime="20200831 09:28:42.253"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 period</arg>
+<arg>07.06.2020T22:00/1h</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.253" endtime="20200831 09:28:42.254"></status>
+</kw>
+<kw name="Number" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON number.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 rate</arg>
+<arg>3.68</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.254" endtime="20200831 09:28:42.255"></status>
+</kw>
+<status status="PASS" starttime="20200831 09:28:41.859" endtime="20200831 09:28:42.255" critical="yes"></status>
 </test>
 <test id="s1-t2" name="fetch, 422, Missing data for parameters required field">
 <kw name="Get Body">
@@ -118,8 +647,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.750" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.750" endtime="20200817 19:03:24.750"></status>
+<msg timestamp="20200831 09:28:42.256" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.256" endtime="20200831 09:28:42.256"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -130,8 +659,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.750" level="INFO">${now} = 2020-08-17T16:03:24+00:00</msg>
-<status status="PASS" starttime="20200817 19:03:24.750" endtime="20200817 19:03:24.750"></status>
+<msg timestamp="20200831 09:28:42.257" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
+<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.257"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -140,7 +669,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.750" endtime="20200817 19:03:24.750"></status>
+<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.257"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -148,7 +677,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.751" endtime="20200817 19:03:24.751"></status>
+<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.257"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -159,11 +688,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.751" level="INFO">${json_string} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.751" endtime="20200817 19:03:24.751"></status>
+<msg timestamp="20200831 09:28:42.258" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.258"></status>
 </kw>
-<msg timestamp="20200817 19:03:24.751" level="INFO">${body} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.749" endtime="20200817 19:03:24.751"></status>
+<msg timestamp="20200831 09:28:42.258" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.256" endtime="20200831 09:28:42.258"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -174,8 +703,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.752" level="INFO">${body} = {'timestamp': '2020-08-17T16:03:24+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.751" endtime="20200817 19:03:24.752"></status>
+<msg timestamp="20200831 09:28:42.258" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.258" endtime="20200831 09:28:42.258"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -183,7 +712,7 @@
 <arg>${body}</arg>
 <arg>parameters</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.752" endtime="20200817 19:03:24.752"></status>
+<status status="PASS" starttime="20200831 09:28:42.258" endtime="20200831 09:28:42.259"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -197,9 +726,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.753" level="INFO">o01oHvXlpLPeqU66y5C3QgaO9A8INALFrS1PBVjEUzk=</msg>
-<msg timestamp="20200817 19:03:24.753" level="INFO">${signature} = o01oHvXlpLPeqU66y5C3QgaO9A8INALFrS1PBVjEUzk=</msg>
-<status status="PASS" starttime="20200817 19:03:24.753" endtime="20200817 19:03:24.753"></status>
+<msg timestamp="20200831 09:28:42.259" level="INFO">KtSzJyrFnMLCyA90PRQIc0Jy7iD0SCH92MolAViIcDk=</msg>
+<msg timestamp="20200831 09:28:42.259" level="INFO">${signature} = KtSzJyrFnMLCyA90PRQIc0Jy7iD0SCH92MolAViIcDk=</msg>
+<status status="PASS" starttime="20200831 09:28:42.259" endtime="20200831 09:28:42.260"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -209,7 +738,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.753" endtime="20200817 19:03:24.753"></status>
+<status status="PASS" starttime="20200831 09:28:42.260" endtime="20200831 09:28:42.260"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -220,12 +749,113 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<msg timestamp="20200817 19:03:24.760" level="FAIL">KeyError: 'content-type'</msg>
-<status status="FAIL" starttime="20200817 19:03:24.753" endtime="20200817 19:03:24.760"></status>
+<status status="PASS" starttime="20200831 09:28:42.260" endtime="20200831 09:28:42.265"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.752" endtime="20200817 19:03:24.760"></status>
+<kw name="Output Schema" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON Schema to terminal or a file.*</doc>
+<arguments>
+<arg>response body</arg>
+</arguments>
+<msg timestamp="20200831 09:28:42.266" level="INFO">
+{
+    "type": "object",
+    "properties": {
+        "error": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "default": 422
+                },
+                "message": {
+                    "type": "object",
+                    "properties": {
+                        "parameters": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.targetObject": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        },
+                        "parameters.period": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        }
+                    },
+                    "required": [
+                        "parameters",
+                        "parameters.period",
+                        "parameters.targetObject"
+                    ]
+                }
+            },
+            "required": [
+                "message",
+                "status"
+            ]
+        }
+    },
+    "required": [
+        "error"
+    ]
+}</msg>
+<status status="PASS" starttime="20200831 09:28:42.265" endtime="20200831 09:28:42.267"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.749" endtime="20200817 19:03:24.760" critical="yes">KeyError: 'content-type'</status>
+<status status="PASS" starttime="20200831 09:28:42.259" endtime="20200831 09:28:42.267"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>422</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.267" endtime="20200831 09:28:42.268"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response body error status</arg>
+<arg>422</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.268" endtime="20200831 09:28:42.268"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body error message parameters 0</arg>
+<arg>Missing data for required field.</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.268" endtime="20200831 09:28:42.269"></status>
+</kw>
+<status status="PASS" starttime="20200831 09:28:42.256" endtime="20200831 09:28:42.269" critical="yes"></status>
 </test>
 <test id="s1-t3" name="fetch, 422, missing period field in parameters">
 <kw name="Get Body">
@@ -241,8 +871,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.762" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.762" endtime="20200817 19:03:24.762"></status>
+<msg timestamp="20200831 09:28:42.270" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.269" endtime="20200831 09:28:42.270"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -253,8 +883,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.762" level="INFO">${now} = 2020-08-17T16:03:24+00:00</msg>
-<status status="PASS" starttime="20200817 19:03:24.762" endtime="20200817 19:03:24.762"></status>
+<msg timestamp="20200831 09:28:42.270" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
+<status status="PASS" starttime="20200831 09:28:42.270" endtime="20200831 09:28:42.270"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -263,7 +893,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.762" endtime="20200817 19:03:24.762"></status>
+<status status="PASS" starttime="20200831 09:28:42.270" endtime="20200831 09:28:42.270"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -271,7 +901,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.763" endtime="20200817 19:03:24.763"></status>
+<status status="PASS" starttime="20200831 09:28:42.270" endtime="20200831 09:28:42.271"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -282,11 +912,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.763" level="INFO">${json_string} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.763" endtime="20200817 19:03:24.763"></status>
+<msg timestamp="20200831 09:28:42.271" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.271" endtime="20200831 09:28:42.271"></status>
 </kw>
-<msg timestamp="20200817 19:03:24.763" level="INFO">${body} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.761" endtime="20200817 19:03:24.763"></status>
+<msg timestamp="20200831 09:28:42.271" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.269" endtime="20200831 09:28:42.271"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -297,8 +927,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.764" level="INFO">${body} = {'timestamp': '2020-08-17T16:03:24+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.764" endtime="20200817 19:03:24.764"></status>
+<msg timestamp="20200831 09:28:42.272" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.271" endtime="20200831 09:28:42.272"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -306,7 +936,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>period</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.764" endtime="20200817 19:03:24.764"></status>
+<status status="PASS" starttime="20200831 09:28:42.272" endtime="20200831 09:28:42.272"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -320,9 +950,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.765" level="INFO">l3B2O8n47GDW7jXpwgmMpZqNlDdfgvXEzZFnrZb/10Y=</msg>
-<msg timestamp="20200817 19:03:24.765" level="INFO">${signature} = l3B2O8n47GDW7jXpwgmMpZqNlDdfgvXEzZFnrZb/10Y=</msg>
-<status status="PASS" starttime="20200817 19:03:24.765" endtime="20200817 19:03:24.765"></status>
+<msg timestamp="20200831 09:28:42.273" level="INFO">NaMgCSTqL+2kNwrY2lgDk0eJqHCqvC6ZpP1RmMa+ipE=</msg>
+<msg timestamp="20200831 09:28:42.273" level="INFO">${signature} = NaMgCSTqL+2kNwrY2lgDk0eJqHCqvC6ZpP1RmMa+ipE=</msg>
+<status status="PASS" starttime="20200831 09:28:42.273" endtime="20200831 09:28:42.273"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -332,7 +962,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.765" endtime="20200817 19:03:24.765"></status>
+<status status="PASS" starttime="20200831 09:28:42.274" endtime="20200831 09:28:42.274"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -343,12 +973,93 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<msg timestamp="20200817 19:03:24.772" level="FAIL">KeyError: 'content-type'</msg>
-<status status="FAIL" starttime="20200817 19:03:24.766" endtime="20200817 19:03:24.772"></status>
+<status status="PASS" starttime="20200831 09:28:42.274" endtime="20200831 09:28:42.279"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.764" endtime="20200817 19:03:24.772"></status>
+<kw name="Output Schema" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON Schema to terminal or a file.*</doc>
+<arguments>
+<arg>response body</arg>
+</arguments>
+<msg timestamp="20200831 09:28:42.279" level="INFO">
+{
+    "type": "object",
+    "properties": {
+        "error": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "default": 422
+                },
+                "message": {
+                    "type": "object",
+                    "properties": {
+                        "parameters.period": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        }
+                    },
+                    "required": [
+                        "parameters.period"
+                    ]
+                }
+            },
+            "required": [
+                "message",
+                "status"
+            ]
+        }
+    },
+    "required": [
+        "error"
+    ]
+}</msg>
+<status status="PASS" starttime="20200831 09:28:42.279" endtime="20200831 09:28:42.280"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.761" endtime="20200817 19:03:24.772" critical="yes">KeyError: 'content-type'</status>
+<status status="PASS" starttime="20200831 09:28:42.272" endtime="20200831 09:28:42.280"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>422</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.280" endtime="20200831 09:28:42.281"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response body error status</arg>
+<arg>422</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.281" endtime="20200831 09:28:42.281"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body error message parameters.period 0</arg>
+<arg>Missing data for required field.</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.282" endtime="20200831 09:28:42.282"></status>
+</kw>
+<status status="PASS" starttime="20200831 09:28:42.269" endtime="20200831 09:28:42.282" critical="yes"></status>
 </test>
 <test id="s1-t4" name="fetch, 422, missing targetObject field in parameters">
 <kw name="Get Body">
@@ -364,8 +1075,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.774" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.773" endtime="20200817 19:03:24.774"></status>
+<msg timestamp="20200831 09:28:42.284" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.283" endtime="20200831 09:28:42.284"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -376,8 +1087,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.774" level="INFO">${now} = 2020-08-17T16:03:24+00:00</msg>
-<status status="PASS" starttime="20200817 19:03:24.774" endtime="20200817 19:03:24.774"></status>
+<msg timestamp="20200831 09:28:42.284" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
+<status status="PASS" starttime="20200831 09:28:42.284" endtime="20200831 09:28:42.284"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -386,7 +1097,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.774" endtime="20200817 19:03:24.774"></status>
+<status status="PASS" starttime="20200831 09:28:42.284" endtime="20200831 09:28:42.284"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -394,7 +1105,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.774" endtime="20200817 19:03:24.774"></status>
+<status status="PASS" starttime="20200831 09:28:42.284" endtime="20200831 09:28:42.285"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -405,11 +1116,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.775" level="INFO">${json_string} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.775" endtime="20200817 19:03:24.775"></status>
+<msg timestamp="20200831 09:28:42.285" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.285" endtime="20200831 09:28:42.285"></status>
 </kw>
-<msg timestamp="20200817 19:03:24.775" level="INFO">${body} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.773" endtime="20200817 19:03:24.775"></status>
+<msg timestamp="20200831 09:28:42.285" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.283" endtime="20200831 09:28:42.285"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -420,8 +1131,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.775" level="INFO">${body} = {'timestamp': '2020-08-17T16:03:24+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.775" endtime="20200817 19:03:24.775"></status>
+<msg timestamp="20200831 09:28:42.286" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.285" endtime="20200831 09:28:42.286"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -429,7 +1140,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>targetObject</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.776" endtime="20200817 19:03:24.776"></status>
+<status status="PASS" starttime="20200831 09:28:42.286" endtime="20200831 09:28:42.286"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -443,9 +1154,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.776" level="INFO">MLHkgSg8gyIjRbCEwUoRIdY1iOVHYyArY/0XYzCL1tg=</msg>
-<msg timestamp="20200817 19:03:24.777" level="INFO">${signature} = MLHkgSg8gyIjRbCEwUoRIdY1iOVHYyArY/0XYzCL1tg=</msg>
-<status status="PASS" starttime="20200817 19:03:24.776" endtime="20200817 19:03:24.777"></status>
+<msg timestamp="20200831 09:28:42.298" level="INFO">jO7snakuvXktOSX5lq4KhM7VUUh3jzr279e7CPJUVWE=</msg>
+<msg timestamp="20200831 09:28:42.298" level="INFO">${signature} = jO7snakuvXktOSX5lq4KhM7VUUh3jzr279e7CPJUVWE=</msg>
+<status status="PASS" starttime="20200831 09:28:42.286" endtime="20200831 09:28:42.298"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -455,7 +1166,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.777" endtime="20200817 19:03:24.777"></status>
+<status status="PASS" starttime="20200831 09:28:42.298" endtime="20200831 09:28:42.299"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -466,12 +1177,93 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<msg timestamp="20200817 19:03:24.783" level="FAIL">KeyError: 'content-type'</msg>
-<status status="FAIL" starttime="20200817 19:03:24.777" endtime="20200817 19:03:24.783"></status>
+<status status="PASS" starttime="20200831 09:28:42.299" endtime="20200831 09:28:42.305"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.776" endtime="20200817 19:03:24.783"></status>
+<kw name="Output Schema" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON Schema to terminal or a file.*</doc>
+<arguments>
+<arg>response body</arg>
+</arguments>
+<msg timestamp="20200831 09:28:42.305" level="INFO">
+{
+    "type": "object",
+    "properties": {
+        "error": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "default": 422
+                },
+                "message": {
+                    "type": "object",
+                    "properties": {
+                        "parameters.targetObject": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "default": [
+                                "Missing data for required field."
+                            ]
+                        }
+                    },
+                    "required": [
+                        "parameters.targetObject"
+                    ]
+                }
+            },
+            "required": [
+                "message",
+                "status"
+            ]
+        }
+    },
+    "required": [
+        "error"
+    ]
+}</msg>
+<status status="PASS" starttime="20200831 09:28:42.305" endtime="20200831 09:28:42.306"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.772" endtime="20200817 19:03:24.783" critical="yes">KeyError: 'content-type'</status>
+<status status="PASS" starttime="20200831 09:28:42.286" endtime="20200831 09:28:42.306"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>422</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.306" endtime="20200831 09:28:42.307"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response body error status</arg>
+<arg>422</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.307" endtime="20200831 09:28:42.307"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body error message parameters.targetObject 0</arg>
+<arg>Missing data for required field.</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.307" endtime="20200831 09:28:42.308"></status>
+</kw>
+<status status="PASS" starttime="20200831 09:28:42.283" endtime="20200831 09:28:42.308" critical="yes"></status>
 </test>
 <test id="s1-t5" name="fetch, 200, period's first time parameter is bigger than second">
 <kw name="Get Body">
@@ -487,8 +1279,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.784" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.784" endtime="20200817 19:03:24.785"></status>
+<msg timestamp="20200831 09:28:42.309" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.309" endtime="20200831 09:28:42.309"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -499,8 +1291,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.785" level="INFO">${now} = 2020-08-17T16:03:24+00:00</msg>
-<status status="PASS" starttime="20200817 19:03:24.785" endtime="20200817 19:03:24.785"></status>
+<msg timestamp="20200831 09:28:42.310" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
+<status status="PASS" starttime="20200831 09:28:42.310" endtime="20200831 09:28:42.310"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -509,7 +1301,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.785" endtime="20200817 19:03:24.785"></status>
+<status status="PASS" starttime="20200831 09:28:42.310" endtime="20200831 09:28:42.310"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -517,7 +1309,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.785" endtime="20200817 19:03:24.785"></status>
+<status status="PASS" starttime="20200831 09:28:42.310" endtime="20200831 09:28:42.310"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -528,11 +1320,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.786" level="INFO">${json_string} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.785" endtime="20200817 19:03:24.786"></status>
+<msg timestamp="20200831 09:28:42.311" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.311" endtime="20200831 09:28:42.311"></status>
 </kw>
-<msg timestamp="20200817 19:03:24.786" level="INFO">${body} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.784" endtime="20200817 19:03:24.786"></status>
+<msg timestamp="20200831 09:28:42.311" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.309" endtime="20200831 09:28:42.311"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -543,8 +1335,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.786" level="INFO">${body} = {'timestamp': '2020-08-17T16:03:24+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.786" endtime="20200817 19:03:24.786"></status>
+<msg timestamp="20200831 09:28:42.312" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.311" endtime="20200831 09:28:42.312"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -552,7 +1344,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>period=${PERIOD_SWAP}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.786" endtime="20200817 19:03:24.787"></status>
+<status status="PASS" starttime="20200831 09:28:42.312" endtime="20200831 09:28:42.312"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -563,8 +1355,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.787" level="INFO">${body} = {"timestamp": "2020-08-17T16:03:24+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-09T22:00Z/2020-06-08T13:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200817 19:03:24.787" endtime="20200817 19:03:24.787"></status>
+<msg timestamp="20200831 09:28:42.313" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-09T22:00Z/2020-06-08T13:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 09:28:42.312" endtime="20200831 09:28:42.313"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -578,9 +1370,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200817 19:03:24.788" level="INFO">4YxRRpvMW0KL32MHw74O6/JZFzB/D1f8lsw9cTiG7QE=</msg>
-<msg timestamp="20200817 19:03:24.788" level="INFO">${signature} = 4YxRRpvMW0KL32MHw74O6/JZFzB/D1f8lsw9cTiG7QE=</msg>
-<status status="PASS" starttime="20200817 19:03:24.788" endtime="20200817 19:03:24.788"></status>
+<msg timestamp="20200831 09:28:42.313" level="INFO">G97Z/Am1H6ivWxkjz8evBhukE77IJXvEGToGOsO21Hs=</msg>
+<msg timestamp="20200831 09:28:42.313" level="INFO">${signature} = G97Z/Am1H6ivWxkjz8evBhukE77IJXvEGToGOsO21Hs=</msg>
+<status status="PASS" starttime="20200831 09:28:42.313" endtime="20200831 09:28:42.313"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -590,7 +1382,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200817 19:03:24.788" endtime="20200817 19:03:24.788"></status>
+<status status="PASS" starttime="20200831 09:28:42.313" endtime="20200831 09:28:42.314"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -601,24 +1393,553 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<msg timestamp="20200817 19:03:24.795" level="FAIL">KeyError: 'content-type'</msg>
-<status status="FAIL" starttime="20200817 19:03:24.788" endtime="20200817 19:03:24.795"></status>
+<status status="PASS" starttime="20200831 09:28:42.314" endtime="20200831 09:28:42.640"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.787" endtime="20200817 19:03:24.795"></status>
+<kw name="Output Schema" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON Schema to terminal or a file.*</doc>
+<arguments>
+<arg>response body</arg>
+</arguments>
+<msg timestamp="20200831 09:28:42.642" level="INFO">
+{
+    "type": "object",
+    "properties": {
+        "@context": {
+            "type": "string",
+            "default": "https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "forecasts": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "@type": {
+                                "type": "string"
+                            },
+                            "period": {
+                                "type": "string"
+                            },
+                            "pricePlans": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "@type": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "period": {
+                                            "type": "string"
+                                        },
+                                        "rate": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "required": [
+                                        "@type",
+                                        "currency",
+                                        "period",
+                                        "rate"
+                                    ]
+                                }
+                            }
+                        },
+                        "required": [
+                            "@type",
+                            "period",
+                            "pricePlans"
+                        ]
+                    },
+                    "default": [
+                        {
+                            "@type": "ForecastElectricityPriceMWH",
+                            "period": "07.06.2020/09.06.2020",
+                            "pricePlans": [
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "07.06.2020T22:00/1h",
+                                    "rate": 3.68
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "07.06.2020T23:00/1h",
+                                    "rate": 2.85
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T00:00/1h",
+                                    "rate": 2.95
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T01:00/1h",
+                                    "rate": 3.15
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T02:00/1h",
+                                    "rate": 4.58
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T03:00/1h",
+                                    "rate": 7.06
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T04:00/1h",
+                                    "rate": 32.65
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T05:00/1h",
+                                    "rate": 42.95
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T06:00/1h",
+                                    "rate": 41.24
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T07:00/1h",
+                                    "rate": 38.9
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T08:00/1h",
+                                    "rate": 35.1
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T09:00/1h",
+                                    "rate": 35.86
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T10:00/1h",
+                                    "rate": 33.81
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T11:00/1h",
+                                    "rate": 32.72
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T12:00/1h",
+                                    "rate": 30.94
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T13:00/1h",
+                                    "rate": 30
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T14:00/1h",
+                                    "rate": 29.42
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T15:00/1h",
+                                    "rate": 33.31
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T16:00/1h",
+                                    "rate": 38.85
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T17:00/1h",
+                                    "rate": 38.65
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T18:00/1h",
+                                    "rate": 35.23
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T19:00/1h",
+                                    "rate": 34.6
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T20:00/1h",
+                                    "rate": 32.26
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T21:00/1h",
+                                    "rate": 11.04
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T22:00/1h",
+                                    "rate": 5.33
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "08.06.2020T23:00/1h",
+                                    "rate": 3.81
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T00:00/1h",
+                                    "rate": 3.34
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T01:00/1h",
+                                    "rate": 3.11
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T02:00/1h",
+                                    "rate": 3.64
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T03:00/1h",
+                                    "rate": 7.21
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T04:00/1h",
+                                    "rate": 33.43
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T05:00/1h",
+                                    "rate": 47.74
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T06:00/1h",
+                                    "rate": 55.78
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T07:00/1h",
+                                    "rate": 55.67
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T08:00/1h",
+                                    "rate": 54.6
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T09:00/1h",
+                                    "rate": 55.23
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T10:00/1h",
+                                    "rate": 55.27
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T11:00/1h",
+                                    "rate": 40.07
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T12:00/1h",
+                                    "rate": 36.39
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T13:00/1h",
+                                    "rate": 33.49
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T14:00/1h",
+                                    "rate": 33.76
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T15:00/1h",
+                                    "rate": 41.61
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T16:00/1h",
+                                    "rate": 45.21
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T17:00/1h",
+                                    "rate": 48.07
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T18:00/1h",
+                                    "rate": 42.06
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T19:00/1h",
+                                    "rate": 36.57
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T20:00/1h",
+                                    "rate": 18.97
+                                },
+                                {
+                                    "@type": "pricePlan",
+                                    "currency": "EUR",
+                                    "period": "09.06.2020T21:00/1h",
+                                    "rate": 8.38
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "forecasts"
+            ]
+        },
+        "signature": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "default": "RsaSignature2018"
+                },
+                "created": {
+                    "type": "string",
+                    "default": "2020-08-31T09:28:42+03:00"
+                },
+                "creator": {
+                    "type": "string",
+                    "default": "http://localhost:8080/entsoe/translator/v1/public.key"
+                },
+                "signatureValue": {
+                    "type": "string",
+                    "default": "Z27E7YPvXRNw84L1T1PYjDt/R1rKitlo3X9yNzZPhqaIPZC0RFMqP4EiFoUmE3vYWIj1Uv3qvV+4dQR2d+DakA8ySdRgDCgUa/x04zLZKVy0lZH97fA2/IvvPm3XkBHpUFnWV5p5mDbUuKIJhwEM0ydMrS6DnbTFJKp0J1pttoHGIwVoU8rXJ9LzWE+rFhvzVk48vgiSAqVP1HtH72hvpThpaYu3qCrRl5rLVHbZ8kkbCnxNJUFb++ErvMQ2Ywrsn4BXBZbVba9rAvJUuwbQsdyKONjoVtF4xo3ec6jtgK7/lcirZ8ukkBG7VKxBgaa912mtcpUfg3Ik167MsnvgTX6hwcPD3Cyflpv1+BRM7ShW5po0kgTS4V8VP0C/bjgH3NwwK9Vkz39glWfxF8NOvrlPxzqFMdgVVoaIt+blYVAehz2d9At0YkZCxrZj6jSYxlqoTTPyKkmq1XdErPG67wn0nqfExsXn2CWIYVoFsY1jyGGtBo9Hk5zVEpcblg/acQO4Zvc6ERRWOVeaCxt6wwABUo2hm3L894EVLNCrftT3KEf0AG3RY0MeN1eSUQJbf80vsNxEeytI7wP/qi7RR+FGlmmj8tuH6J+fCL+hV8O4yFSNesOnxXt8diPTpV2UhoeNk4/BlhbgMgSnJ08XqudeoqSNqK+aj25R1hwA7v8="
+                }
+            },
+            "required": [
+                "created",
+                "creator",
+                "signatureValue",
+                "type"
+            ]
+        }
+    },
+    "required": [
+        "@context",
+        "data",
+        "signature"
+    ]
+}</msg>
+<status status="PASS" starttime="20200831 09:28:42.641" endtime="20200831 09:28:42.653"></status>
 </kw>
-<status status="FAIL" starttime="20200817 19:03:24.784" endtime="20200817 19:03:24.795" critical="yes">KeyError: 'content-type'</status>
+<status status="PASS" starttime="20200831 09:28:42.313" endtime="20200831 09:28:42.653"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.653" endtime="20200831 09:28:42.654"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body @context</arg>
+<arg>https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.654" endtime="20200831 09:28:42.655"></status>
+</kw>
+<kw name="Object" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON object.*</doc>
+<arguments>
+<arg>response body data</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.655" endtime="20200831 09:28:42.657"></status>
+</kw>
+<kw name="Array" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON array.*</doc>
+<arguments>
+<arg>response body data forecasts</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.657" endtime="20200831 09:28:42.659"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 @type</arg>
+<arg>ForecastElectricityPriceMWH</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.659" endtime="20200831 09:28:42.660"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 period</arg>
+<arg>07.06.2020/09.06.2020</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.660" endtime="20200831 09:28:42.661"></status>
+</kw>
+<kw name="Array" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON array.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.661" endtime="20200831 09:28:42.663"></status>
+</kw>
+<kw name="Object" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON object.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0</arg>
+<arg>{"@type": "pricePlan","currency": "EUR","period": "07.06.2020T22:00/1h","rate": 3.68}</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.663" endtime="20200831 09:28:42.664"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 @type</arg>
+<arg>pricePlan</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.665" endtime="20200831 09:28:42.665"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 currency</arg>
+<arg>EUR</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.666" endtime="20200831 09:28:42.666"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 period</arg>
+<arg>07.06.2020T22:00/1h</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.667" endtime="20200831 09:28:42.667"></status>
+</kw>
+<kw name="Number" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON number.*</doc>
+<arguments>
+<arg>response body data forecasts 0 pricePlans 0 rate</arg>
+<arg>3.68</arg>
+</arguments>
+<status status="PASS" starttime="20200831 09:28:42.668" endtime="20200831 09:28:42.668"></status>
+</kw>
+<status status="PASS" starttime="20200831 09:28:42.308" endtime="20200831 09:28:42.669" critical="yes"></status>
 </test>
-<status status="FAIL" starttime="20200817 19:03:24.096" endtime="20200817 19:03:24.796"></status>
+<status status="PASS" starttime="20200831 09:28:41.432" endtime="20200831 09:28:42.669"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="5">Critical Tests</stat>
-<stat pass="0" fail="5">All Tests</stat>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="5" id="s1" name="Connector Tests">Connector Tests</stat>
+<stat pass="5" fail="0" id="s1" name="Connector Tests">Connector Tests</stat>
 </suite>
 </statistics>
 <errors>

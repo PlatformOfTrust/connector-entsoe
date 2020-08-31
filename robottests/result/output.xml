@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.5 on darwin)" generated="20200831 09:28:41.431" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.5 on darwin)" generated="20200831 10:00:03.508" rpa="false">
 <suite id="s1" name="Connector Tests" source="/Users/konstantinkomovits/PoT/connector-entsoe/robottests/connector_tests.robot">
 <test id="s1-t1" name="fetch, 200">
 <kw name="Get Body">
@@ -15,8 +15,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:41.861" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:41.861" endtime="20200831 09:28:41.861"></status>
+<msg timestamp="20200831 10:00:03.753" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:03.752" endtime="20200831 10:00:03.753"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -27,8 +27,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200831 09:28:41.862" level="INFO">${now} = 2020-08-31T06:28:41+00:00</msg>
-<status status="PASS" starttime="20200831 09:28:41.861" endtime="20200831 09:28:41.862"></status>
+<msg timestamp="20200831 10:00:03.753" level="INFO">${now} = 2020-08-31T07:00:03+00:00</msg>
+<status status="PASS" starttime="20200831 10:00:03.753" endtime="20200831 10:00:03.753"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -37,7 +37,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:41.862" endtime="20200831 09:28:41.862"></status>
+<status status="PASS" starttime="20200831 10:00:03.753" endtime="20200831 10:00:03.754"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -45,7 +45,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:41.862" endtime="20200831 09:28:41.862"></status>
+<status status="PASS" starttime="20200831 10:00:03.754" endtime="20200831 10:00:03.754"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -56,11 +56,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200831 09:28:41.863" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:41+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:41.862" endtime="20200831 09:28:41.863"></status>
+<msg timestamp="20200831 10:00:03.754" level="INFO">${json_string} = {"timestamp": "2020-08-31T07:00:03+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:03.754" endtime="20200831 10:00:03.754"></status>
 </kw>
-<msg timestamp="20200831 09:28:41.863" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:41+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:41.860" endtime="20200831 09:28:41.863"></status>
+<msg timestamp="20200831 10:00:03.754" level="INFO">${body} = {"timestamp": "2020-08-31T07:00:03+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:03.752" endtime="20200831 10:00:03.754"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -74,9 +74,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200831 09:28:41.864" level="INFO">i8LkOvV3ri0Wbo7S7H4n8y87Pi8cPgBDH7Fkcz1B3O0=</msg>
-<msg timestamp="20200831 09:28:41.864" level="INFO">${signature} = i8LkOvV3ri0Wbo7S7H4n8y87Pi8cPgBDH7Fkcz1B3O0=</msg>
-<status status="PASS" starttime="20200831 09:28:41.864" endtime="20200831 09:28:41.864"></status>
+<msg timestamp="20200831 10:00:03.755" level="INFO">1HVVli3PxhITigD+/+eGcse3efR5dQCxKoUij8HdvCo=</msg>
+<msg timestamp="20200831 10:00:03.755" level="INFO">${signature} = 1HVVli3PxhITigD+/+eGcse3efR5dQCxKoUij8HdvCo=</msg>
+<status status="PASS" starttime="20200831 10:00:03.755" endtime="20200831 10:00:03.755"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -86,7 +86,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:41.864" endtime="20200831 09:28:41.864"></status>
+<status status="PASS" starttime="20200831 10:00:03.755" endtime="20200831 10:00:03.755"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -97,7 +97,7 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:41.864" endtime="20200831 09:28:42.223"></status>
+<status status="PASS" starttime="20200831 10:00:03.756" endtime="20200831 10:00:04.180"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -107,13 +107,13 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20200831 09:28:42.224" level="INFO">
+<msg timestamp="20200831 10:00:04.181" level="INFO">
 {
     "type": "object",
     "properties": {
         "@context": {
             "type": "string",
-            "default": "https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/"
+            "default": "https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/"
         },
         "data": {
             "type": "object",
@@ -473,7 +473,7 @@
                 },
                 "created": {
                     "type": "string",
-                    "default": "2020-08-31T09:28:42+03:00"
+                    "default": "2020-08-31T10:00:04+03:00"
                 },
                 "creator": {
                     "type": "string",
@@ -481,7 +481,7 @@
                 },
                 "signatureValue": {
                     "type": "string",
-                    "default": "R56cch1tFNAJ+yAiy1OpUZdCBHfNb+HfvH894ftgWYuCUVm7LoNo/S5HKBzN+mLJMsipxWBz30Z63nTz54SFx0m7rNqK004tNdUuf2PAeJuXi/5vvcD0D7qBKfcEhMDnud4cFGDbuw7/EjHL4R/+rC1k5yo1aIXyPFgaOGk7mWa+fWoK/cDjjW7Eipwfd7Ax+nMn8/CDl85v+OjtG9UBFgpdF6j9m3jVEbp3aWhcKxRpmr010LgV+PZoHqgyyC7nJRXr98++aE/PwUPmHj1rVOE/hAEUcqBDTXivBahMAyVXm7VYnKEYxXXjEwLHSDDaK2tERGw2zqB135kAfUE9EITeFEmMI4AVbazZmMpoUj7SIb8vEqT/lQMHQHIdzpuLZpqhTm8NGC8ES0Vx6Zc+O57LgcSQlegDGLtbXg3Zsv+UvKx2/4onPnHaus/OliQPtNpOTGIg3rKZnEXoLuCsTkZ27TcV1m/vj8D+S4ygJem6bWEBC5iLEBvT5mfcaxF5ZjrOIF4Le/6VhzQD7e7Q2CIziL6X+SG3vD7nnW0IKE7hJBV1YTnq0Zt67HYcz31csaVYUyOtea9gUTklIW1oRVykFAv3Kg6ZssofcTtmQK8Vg9GFdKH+6MZofKSeQooFqi95NTEywgC1mnLMSXIc8XImKuA19hgpBsVZ418SG04="
+                    "default": "SW8VqGtXvzqHDO1+qAoisHGYvCGQDJrnMvWsQuBRYjSYiMBJ34iQMHgwUWO9MsKhNMAFqXGiuH2H25tqVcckDJ9yWia3xeo8OBHEauBK4Fr40D45t7EmrGjh1bHnHZ5LQwoySzdQ73psahk0Rra1ELF+aOlabPR6j5bNJRBT4k9GSi9VDD96d4AUEIrmqDZxEERp4T5HTBUgqrku9RboBnxJ096OwOGRP+Od175dHtUBF8YU3ClnkAaW4ams34juljm59WUlHlO0xnTLbibSDvgfjF8pbwtpUUfJsqha0fKv7osq09ShsvQgjTpSvR4uV0gzc4oStvbHvlxSWoh+1VBVBjI9lBeBh5S0UTsPuWKgX4Q+ujC6ZxYssRGsbvQuXnUZ+whzo6vekWEvr6VSa4XUTr5XKDclwVYLy0Pb1KqkRnvAyGSfHKYq7N73dJCyUU0SaxXcZckuvIjNGkRkAS16p+yAjMiCTlKkXoZyo6p7CJVDsKPZVxxKzzSP3V35lf7ABg32M59P52AcNDsH67bl40/2wN553KJ26xkir8D2Edh7WIomHs25eiOMru2UdX/JMzLLS9B+P0qBnaqxxNowLOsaaVblW1lbB4upzzXZm9IR8/VSwkGrqgkUeBh8FsDe+iB4kqClTIYCNLAv38hIfBxmctTBCAsDhPpPGKI="
                 }
             },
             "required": [
@@ -498,9 +498,9 @@
         "signature"
     ]
 }</msg>
-<status status="PASS" starttime="20200831 09:28:42.223" endtime="20200831 09:28:42.239"></status>
+<status status="PASS" starttime="20200831 10:00:04.180" endtime="20200831 10:00:04.196"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:41.863" endtime="20200831 09:28:42.239"></status>
+<status status="PASS" starttime="20200831 10:00:03.755" endtime="20200831 10:00:04.196"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -511,7 +511,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.240" endtime="20200831 09:28:42.240"></status>
+<status status="PASS" starttime="20200831 10:00:04.196" endtime="20200831 10:00:04.197"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -520,9 +520,9 @@
 <doc>*Asserts the field as JSON string.*</doc>
 <arguments>
 <arg>response body @context</arg>
-<arg>https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/</arg>
+<arg>https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.241" endtime="20200831 09:28:42.241"></status>
+<status status="PASS" starttime="20200831 10:00:04.197" endtime="20200831 10:00:04.197"></status>
 </kw>
 <kw name="Object" library="REST">
 <tags>
@@ -532,7 +532,7 @@
 <arguments>
 <arg>response body data</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.241" endtime="20200831 09:28:42.243"></status>
+<status status="PASS" starttime="20200831 10:00:04.197" endtime="20200831 10:00:04.199"></status>
 </kw>
 <kw name="Array" library="REST">
 <tags>
@@ -542,7 +542,7 @@
 <arguments>
 <arg>response body data forecasts</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.243" endtime="20200831 09:28:42.245"></status>
+<status status="PASS" starttime="20200831 10:00:04.199" endtime="20200831 10:00:04.202"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -553,7 +553,7 @@
 <arg>response body data forecasts 0 @type</arg>
 <arg>ForecastElectricityPriceMWH</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.245" endtime="20200831 09:28:42.246"></status>
+<status status="PASS" starttime="20200831 10:00:04.203" endtime="20200831 10:00:04.204"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -564,7 +564,7 @@
 <arg>response body data forecasts 0 period</arg>
 <arg>07.06.2020/09.06.2020</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.246" endtime="20200831 09:28:42.247"></status>
+<status status="PASS" starttime="20200831 10:00:04.204" endtime="20200831 10:00:04.205"></status>
 </kw>
 <kw name="Array" library="REST">
 <tags>
@@ -574,7 +574,7 @@
 <arguments>
 <arg>response body data forecasts 0 pricePlans</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.247" endtime="20200831 09:28:42.250"></status>
+<status status="PASS" starttime="20200831 10:00:04.205" endtime="20200831 10:00:04.207"></status>
 </kw>
 <kw name="Object" library="REST">
 <tags>
@@ -585,7 +585,7 @@
 <arg>response body data forecasts 0 pricePlans 0</arg>
 <arg>{"@type": "pricePlan","currency": "EUR","period": "07.06.2020T22:00/1h","rate": 3.68}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.250" endtime="20200831 09:28:42.251"></status>
+<status status="PASS" starttime="20200831 10:00:04.207" endtime="20200831 10:00:04.209"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -596,7 +596,7 @@
 <arg>response body data forecasts 0 pricePlans 0 @type</arg>
 <arg>pricePlan</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.252" endtime="20200831 09:28:42.252"></status>
+<status status="PASS" starttime="20200831 10:00:04.209" endtime="20200831 10:00:04.210"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -607,7 +607,7 @@
 <arg>response body data forecasts 0 pricePlans 0 currency</arg>
 <arg>EUR</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.253" endtime="20200831 09:28:42.253"></status>
+<status status="PASS" starttime="20200831 10:00:04.210" endtime="20200831 10:00:04.211"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -618,7 +618,7 @@
 <arg>response body data forecasts 0 pricePlans 0 period</arg>
 <arg>07.06.2020T22:00/1h</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.253" endtime="20200831 09:28:42.254"></status>
+<status status="PASS" starttime="20200831 10:00:04.211" endtime="20200831 10:00:04.212"></status>
 </kw>
 <kw name="Number" library="REST">
 <tags>
@@ -629,9 +629,9 @@
 <arg>response body data forecasts 0 pricePlans 0 rate</arg>
 <arg>3.68</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.254" endtime="20200831 09:28:42.255"></status>
+<status status="PASS" starttime="20200831 10:00:04.212" endtime="20200831 10:00:04.213"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:41.859" endtime="20200831 09:28:42.255" critical="yes"></status>
+<status status="PASS" starttime="20200831 10:00:03.752" endtime="20200831 10:00:04.213" critical="yes"></status>
 </test>
 <test id="s1-t2" name="fetch, 422, Missing data for parameters required field">
 <kw name="Get Body">
@@ -647,8 +647,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.256" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.256" endtime="20200831 09:28:42.256"></status>
+<msg timestamp="20200831 10:00:04.215" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.214" endtime="20200831 10:00:04.215"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -659,8 +659,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.257" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
-<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.257"></status>
+<msg timestamp="20200831 10:00:04.215" level="INFO">${now} = 2020-08-31T07:00:04+00:00</msg>
+<status status="PASS" starttime="20200831 10:00:04.215" endtime="20200831 10:00:04.215"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -669,7 +669,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.257"></status>
+<status status="PASS" starttime="20200831 10:00:04.215" endtime="20200831 10:00:04.215"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -677,7 +677,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.257"></status>
+<status status="PASS" starttime="20200831 10:00:04.215" endtime="20200831 10:00:04.215"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -688,11 +688,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.258" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.257" endtime="20200831 09:28:42.258"></status>
+<msg timestamp="20200831 10:00:04.216" level="INFO">${json_string} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.216" endtime="20200831 10:00:04.216"></status>
 </kw>
-<msg timestamp="20200831 09:28:42.258" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.256" endtime="20200831 09:28:42.258"></status>
+<msg timestamp="20200831 10:00:04.216" level="INFO">${body} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.214" endtime="20200831 10:00:04.216"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -703,8 +703,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.258" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.258" endtime="20200831 09:28:42.258"></status>
+<msg timestamp="20200831 10:00:04.216" level="INFO">${body} = {'timestamp': '2020-08-31T07:00:04+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.216" endtime="20200831 10:00:04.217"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -712,7 +712,7 @@
 <arg>${body}</arg>
 <arg>parameters</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.258" endtime="20200831 09:28:42.259"></status>
+<status status="PASS" starttime="20200831 10:00:04.217" endtime="20200831 10:00:04.217"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -726,9 +726,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.259" level="INFO">KtSzJyrFnMLCyA90PRQIc0Jy7iD0SCH92MolAViIcDk=</msg>
-<msg timestamp="20200831 09:28:42.259" level="INFO">${signature} = KtSzJyrFnMLCyA90PRQIc0Jy7iD0SCH92MolAViIcDk=</msg>
-<status status="PASS" starttime="20200831 09:28:42.259" endtime="20200831 09:28:42.260"></status>
+<msg timestamp="20200831 10:00:04.217" level="INFO">Z1zw4YvX04ppfRKmzglzjntxdghkMPn9Cfzcv7UAw5g=</msg>
+<msg timestamp="20200831 10:00:04.218" level="INFO">${signature} = Z1zw4YvX04ppfRKmzglzjntxdghkMPn9Cfzcv7UAw5g=</msg>
+<status status="PASS" starttime="20200831 10:00:04.217" endtime="20200831 10:00:04.218"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -738,7 +738,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.260" endtime="20200831 09:28:42.260"></status>
+<status status="PASS" starttime="20200831 10:00:04.218" endtime="20200831 10:00:04.218"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -749,7 +749,7 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.260" endtime="20200831 09:28:42.265"></status>
+<status status="PASS" starttime="20200831 10:00:04.218" endtime="20200831 10:00:04.223"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -759,7 +759,7 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20200831 09:28:42.266" level="INFO">
+<msg timestamp="20200831 10:00:04.223" level="INFO">
 {
     "type": "object",
     "properties": {
@@ -818,9 +818,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20200831 09:28:42.265" endtime="20200831 09:28:42.267"></status>
+<status status="PASS" starttime="20200831 10:00:04.223" endtime="20200831 10:00:04.225"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.259" endtime="20200831 09:28:42.267"></status>
+<status status="PASS" starttime="20200831 10:00:04.217" endtime="20200831 10:00:04.225"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -831,7 +831,7 @@
 <arg>response status</arg>
 <arg>422</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.267" endtime="20200831 09:28:42.268"></status>
+<status status="PASS" starttime="20200831 10:00:04.225" endtime="20200831 10:00:04.226"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -842,7 +842,7 @@
 <arg>response body error status</arg>
 <arg>422</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.268" endtime="20200831 09:28:42.268"></status>
+<status status="PASS" starttime="20200831 10:00:04.226" endtime="20200831 10:00:04.226"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -853,9 +853,9 @@
 <arg>response body error message parameters 0</arg>
 <arg>Missing data for required field.</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.268" endtime="20200831 09:28:42.269"></status>
+<status status="PASS" starttime="20200831 10:00:04.226" endtime="20200831 10:00:04.227"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.256" endtime="20200831 09:28:42.269" critical="yes"></status>
+<status status="PASS" starttime="20200831 10:00:04.213" endtime="20200831 10:00:04.227" critical="yes"></status>
 </test>
 <test id="s1-t3" name="fetch, 422, missing period field in parameters">
 <kw name="Get Body">
@@ -871,8 +871,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.270" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.269" endtime="20200831 09:28:42.270"></status>
+<msg timestamp="20200831 10:00:04.228" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.228" endtime="20200831 10:00:04.228"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -883,8 +883,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.270" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
-<status status="PASS" starttime="20200831 09:28:42.270" endtime="20200831 09:28:42.270"></status>
+<msg timestamp="20200831 10:00:04.228" level="INFO">${now} = 2020-08-31T07:00:04+00:00</msg>
+<status status="PASS" starttime="20200831 10:00:04.228" endtime="20200831 10:00:04.228"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -893,7 +893,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.270" endtime="20200831 09:28:42.270"></status>
+<status status="PASS" starttime="20200831 10:00:04.228" endtime="20200831 10:00:04.228"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -901,7 +901,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.270" endtime="20200831 09:28:42.271"></status>
+<status status="PASS" starttime="20200831 10:00:04.229" endtime="20200831 10:00:04.229"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -912,11 +912,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.271" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.271" endtime="20200831 09:28:42.271"></status>
+<msg timestamp="20200831 10:00:04.229" level="INFO">${json_string} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.229" endtime="20200831 10:00:04.229"></status>
 </kw>
-<msg timestamp="20200831 09:28:42.271" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.269" endtime="20200831 09:28:42.271"></status>
+<msg timestamp="20200831 10:00:04.229" level="INFO">${body} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.227" endtime="20200831 10:00:04.229"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -927,8 +927,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.272" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.271" endtime="20200831 09:28:42.272"></status>
+<msg timestamp="20200831 10:00:04.230" level="INFO">${body} = {'timestamp': '2020-08-31T07:00:04+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.229" endtime="20200831 10:00:04.230"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -936,7 +936,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>period</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.272" endtime="20200831 09:28:42.272"></status>
+<status status="PASS" starttime="20200831 10:00:04.230" endtime="20200831 10:00:04.230"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -950,9 +950,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.273" level="INFO">NaMgCSTqL+2kNwrY2lgDk0eJqHCqvC6ZpP1RmMa+ipE=</msg>
-<msg timestamp="20200831 09:28:42.273" level="INFO">${signature} = NaMgCSTqL+2kNwrY2lgDk0eJqHCqvC6ZpP1RmMa+ipE=</msg>
-<status status="PASS" starttime="20200831 09:28:42.273" endtime="20200831 09:28:42.273"></status>
+<msg timestamp="20200831 10:00:04.232" level="INFO">qHVfCdpaCNrr7OS+k+543tcCEaYUjPz4Snp+IUBLT4w=</msg>
+<msg timestamp="20200831 10:00:04.232" level="INFO">${signature} = qHVfCdpaCNrr7OS+k+543tcCEaYUjPz4Snp+IUBLT4w=</msg>
+<status status="PASS" starttime="20200831 10:00:04.231" endtime="20200831 10:00:04.232"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -962,7 +962,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.274" endtime="20200831 09:28:42.274"></status>
+<status status="PASS" starttime="20200831 10:00:04.232" endtime="20200831 10:00:04.232"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -973,7 +973,7 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.274" endtime="20200831 09:28:42.279"></status>
+<status status="PASS" starttime="20200831 10:00:04.232" endtime="20200831 10:00:04.238"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -983,7 +983,7 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20200831 09:28:42.279" level="INFO">
+<msg timestamp="20200831 10:00:04.238" level="INFO">
 {
     "type": "object",
     "properties": {
@@ -1022,9 +1022,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20200831 09:28:42.279" endtime="20200831 09:28:42.280"></status>
+<status status="PASS" starttime="20200831 10:00:04.238" endtime="20200831 10:00:04.239"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.272" endtime="20200831 09:28:42.280"></status>
+<status status="PASS" starttime="20200831 10:00:04.230" endtime="20200831 10:00:04.239"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1035,7 +1035,7 @@
 <arg>response status</arg>
 <arg>422</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.280" endtime="20200831 09:28:42.281"></status>
+<status status="PASS" starttime="20200831 10:00:04.239" endtime="20200831 10:00:04.240"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1046,7 +1046,7 @@
 <arg>response body error status</arg>
 <arg>422</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.281" endtime="20200831 09:28:42.281"></status>
+<status status="PASS" starttime="20200831 10:00:04.240" endtime="20200831 10:00:04.240"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1057,9 +1057,9 @@
 <arg>response body error message parameters.period 0</arg>
 <arg>Missing data for required field.</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.282" endtime="20200831 09:28:42.282"></status>
+<status status="PASS" starttime="20200831 10:00:04.240" endtime="20200831 10:00:04.241"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.269" endtime="20200831 09:28:42.282" critical="yes"></status>
+<status status="PASS" starttime="20200831 10:00:04.227" endtime="20200831 10:00:04.241" critical="yes"></status>
 </test>
 <test id="s1-t4" name="fetch, 422, missing targetObject field in parameters">
 <kw name="Get Body">
@@ -1075,8 +1075,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.284" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.283" endtime="20200831 09:28:42.284"></status>
+<msg timestamp="20200831 10:00:04.242" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.242" endtime="20200831 10:00:04.242"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -1087,8 +1087,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.284" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
-<status status="PASS" starttime="20200831 09:28:42.284" endtime="20200831 09:28:42.284"></status>
+<msg timestamp="20200831 10:00:04.242" level="INFO">${now} = 2020-08-31T07:00:04+00:00</msg>
+<status status="PASS" starttime="20200831 10:00:04.242" endtime="20200831 10:00:04.242"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1097,7 +1097,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.284" endtime="20200831 09:28:42.284"></status>
+<status status="PASS" starttime="20200831 10:00:04.242" endtime="20200831 10:00:04.242"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1105,7 +1105,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.284" endtime="20200831 09:28:42.285"></status>
+<status status="PASS" starttime="20200831 10:00:04.243" endtime="20200831 10:00:04.243"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1116,11 +1116,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.285" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.285" endtime="20200831 09:28:42.285"></status>
+<msg timestamp="20200831 10:00:04.243" level="INFO">${json_string} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.243" endtime="20200831 10:00:04.243"></status>
 </kw>
-<msg timestamp="20200831 09:28:42.285" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.283" endtime="20200831 09:28:42.285"></status>
+<msg timestamp="20200831 10:00:04.243" level="INFO">${body} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.241" endtime="20200831 10:00:04.243"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1131,8 +1131,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.286" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.285" endtime="20200831 09:28:42.286"></status>
+<msg timestamp="20200831 10:00:04.244" level="INFO">${body} = {'timestamp': '2020-08-31T07:00:04+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.243" endtime="20200831 10:00:04.244"></status>
 </kw>
 <kw name="Pop From Dictionary" library="Collections">
 <doc>Pops the given ``key`` from the ``dictionary`` and returns its value.</doc>
@@ -1140,7 +1140,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>targetObject</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.286" endtime="20200831 09:28:42.286"></status>
+<status status="PASS" starttime="20200831 10:00:04.244" endtime="20200831 10:00:04.244"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -1154,9 +1154,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.298" level="INFO">jO7snakuvXktOSX5lq4KhM7VUUh3jzr279e7CPJUVWE=</msg>
-<msg timestamp="20200831 09:28:42.298" level="INFO">${signature} = jO7snakuvXktOSX5lq4KhM7VUUh3jzr279e7CPJUVWE=</msg>
-<status status="PASS" starttime="20200831 09:28:42.286" endtime="20200831 09:28:42.298"></status>
+<msg timestamp="20200831 10:00:04.256" level="INFO">t7XNKuCRJi1tmsi5vl47SCKG3EYeDwQV0eQJWbpXoX0=</msg>
+<msg timestamp="20200831 10:00:04.256" level="INFO">${signature} = t7XNKuCRJi1tmsi5vl47SCKG3EYeDwQV0eQJWbpXoX0=</msg>
+<status status="PASS" starttime="20200831 10:00:04.244" endtime="20200831 10:00:04.256"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -1166,7 +1166,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.298" endtime="20200831 09:28:42.299"></status>
+<status status="PASS" starttime="20200831 10:00:04.256" endtime="20200831 10:00:04.256"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -1177,7 +1177,7 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.299" endtime="20200831 09:28:42.305"></status>
+<status status="PASS" starttime="20200831 10:00:04.256" endtime="20200831 10:00:04.262"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -1187,7 +1187,7 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20200831 09:28:42.305" level="INFO">
+<msg timestamp="20200831 10:00:04.262" level="INFO">
 {
     "type": "object",
     "properties": {
@@ -1226,9 +1226,9 @@
         "error"
     ]
 }</msg>
-<status status="PASS" starttime="20200831 09:28:42.305" endtime="20200831 09:28:42.306"></status>
+<status status="PASS" starttime="20200831 10:00:04.262" endtime="20200831 10:00:04.263"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.286" endtime="20200831 09:28:42.306"></status>
+<status status="PASS" starttime="20200831 10:00:04.244" endtime="20200831 10:00:04.263"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1239,7 +1239,7 @@
 <arg>response status</arg>
 <arg>422</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.306" endtime="20200831 09:28:42.307"></status>
+<status status="PASS" starttime="20200831 10:00:04.263" endtime="20200831 10:00:04.264"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1250,7 +1250,7 @@
 <arg>response body error status</arg>
 <arg>422</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.307" endtime="20200831 09:28:42.307"></status>
+<status status="PASS" starttime="20200831 10:00:04.264" endtime="20200831 10:00:04.264"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1261,9 +1261,9 @@
 <arg>response body error message parameters.targetObject 0</arg>
 <arg>Missing data for required field.</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.307" endtime="20200831 09:28:42.308"></status>
+<status status="PASS" starttime="20200831 10:00:04.264" endtime="20200831 10:00:04.265"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.283" endtime="20200831 09:28:42.308" critical="yes"></status>
+<status status="PASS" starttime="20200831 10:00:04.241" endtime="20200831 10:00:04.265" critical="yes"></status>
 </test>
 <test id="s1-t5" name="fetch, 200, period's first time parameter is bigger than second">
 <kw name="Get Body">
@@ -1279,8 +1279,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.309" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.309" endtime="20200831 09:28:42.309"></status>
+<msg timestamp="20200831 10:00:04.266" level="INFO">${body} = {'timestamp': '2018-11-01T12:00:00+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.266" endtime="20200831 10:00:04.266"></status>
 </kw>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -1291,8 +1291,8 @@
 <assign>
 <var>${now}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.310" level="INFO">${now} = 2020-08-31T06:28:42+00:00</msg>
-<status status="PASS" starttime="20200831 09:28:42.310" endtime="20200831 09:28:42.310"></status>
+<msg timestamp="20200831 10:00:04.267" level="INFO">${now} = 2020-08-31T07:00:04+00:00</msg>
+<status status="PASS" starttime="20200831 10:00:04.266" endtime="20200831 10:00:04.267"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1301,7 +1301,7 @@
 <arg>timestamp</arg>
 <arg>${now}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.310" endtime="20200831 09:28:42.310"></status>
+<status status="PASS" starttime="20200831 10:00:04.267" endtime="20200831 10:00:04.267"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1309,7 +1309,7 @@
 <arg>${body}</arg>
 <arg>&amp;{kwargs}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.310" endtime="20200831 09:28:42.310"></status>
+<status status="PASS" starttime="20200831 10:00:04.267" endtime="20200831 10:00:04.267"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1320,11 +1320,11 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.311" level="INFO">${json_string} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.311" endtime="20200831 09:28:42.311"></status>
+<msg timestamp="20200831 10:00:04.268" level="INFO">${json_string} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.267" endtime="20200831 10:00:04.268"></status>
 </kw>
-<msg timestamp="20200831 09:28:42.311" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.309" endtime="20200831 09:28:42.311"></status>
+<msg timestamp="20200831 10:00:04.268" level="INFO">${body} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-08T13:00Z/2020-06-09T22:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.266" endtime="20200831 10:00:04.268"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1335,8 +1335,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.312" level="INFO">${body} = {'timestamp': '2020-08-31T06:28:42+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.311" endtime="20200831 09:28:42.312"></status>
+<msg timestamp="20200831 10:00:04.268" level="INFO">${body} = {'timestamp': '2020-08-31T07:00:04+00:00', 'productCode': 'entsoe-electricity-price-product-code', 'parameters': {'period': '2020-06-08T13:00Z/2020-06-09T22:00Z', 'targetObject': '10YFI-1--------U'}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.268" endtime="20200831 10:00:04.269"></status>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
@@ -1344,7 +1344,7 @@
 <arg>${body["parameters"]}</arg>
 <arg>period=${PERIOD_SWAP}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.312" endtime="20200831 09:28:42.312"></status>
+<status status="PASS" starttime="20200831 10:00:04.269" endtime="20200831 10:00:04.269"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1355,8 +1355,8 @@
 <assign>
 <var>${body}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.313" level="INFO">${body} = {"timestamp": "2020-08-31T06:28:42+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-09T22:00Z/2020-06-08T13:00Z", "targetObject": "10YFI-1--------U"}}</msg>
-<status status="PASS" starttime="20200831 09:28:42.312" endtime="20200831 09:28:42.313"></status>
+<msg timestamp="20200831 10:00:04.270" level="INFO">${body} = {"timestamp": "2020-08-31T07:00:04+00:00", "productCode": "entsoe-electricity-price-product-code", "parameters": {"period": "2020-06-09T22:00Z/2020-06-08T13:00Z", "targetObject": "10YFI-1--------U"}}</msg>
+<status status="PASS" starttime="20200831 10:00:04.270" endtime="20200831 10:00:04.270"></status>
 </kw>
 <kw name="Fetch Data Product">
 <arguments>
@@ -1370,9 +1370,9 @@
 <assign>
 <var>${signature}</var>
 </assign>
-<msg timestamp="20200831 09:28:42.313" level="INFO">G97Z/Am1H6ivWxkjz8evBhukE77IJXvEGToGOsO21Hs=</msg>
-<msg timestamp="20200831 09:28:42.313" level="INFO">${signature} = G97Z/Am1H6ivWxkjz8evBhukE77IJXvEGToGOsO21Hs=</msg>
-<status status="PASS" starttime="20200831 09:28:42.313" endtime="20200831 09:28:42.313"></status>
+<msg timestamp="20200831 10:00:04.271" level="INFO">4eiem2Qv0XO+ih+RfPSzG4KTFcvMU/hOM8WuOsRcmPg=</msg>
+<msg timestamp="20200831 10:00:04.271" level="INFO">${signature} = 4eiem2Qv0XO+ih+RfPSzG4KTFcvMU/hOM8WuOsRcmPg=</msg>
+<status status="PASS" starttime="20200831 10:00:04.271" endtime="20200831 10:00:04.271"></status>
 </kw>
 <kw name="Set Headers" library="REST">
 <tags>
@@ -1382,7 +1382,7 @@
 <arguments>
 <arg>{"x-pot-signature": "${signature}", "x-app-token": "${APP_TOKEN}"}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.313" endtime="20200831 09:28:42.314"></status>
+<status status="PASS" starttime="20200831 10:00:04.271" endtime="20200831 10:00:04.272"></status>
 </kw>
 <kw name="Post" library="REST">
 <tags>
@@ -1393,7 +1393,7 @@
 <arg>/translator/v1/fetch</arg>
 <arg>${body}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.314" endtime="20200831 09:28:42.640"></status>
+<status status="PASS" starttime="20200831 10:00:04.272" endtime="20200831 10:00:04.764"></status>
 </kw>
 <kw name="Output Schema" library="REST">
 <tags>
@@ -1403,13 +1403,13 @@
 <arguments>
 <arg>response body</arg>
 </arguments>
-<msg timestamp="20200831 09:28:42.642" level="INFO">
+<msg timestamp="20200831 10:00:04.765" level="INFO">
 {
     "type": "object",
     "properties": {
         "@context": {
             "type": "string",
-            "default": "https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/"
+            "default": "https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/"
         },
         "data": {
             "type": "object",
@@ -1769,7 +1769,7 @@
                 },
                 "created": {
                     "type": "string",
-                    "default": "2020-08-31T09:28:42+03:00"
+                    "default": "2020-08-31T10:00:04+03:00"
                 },
                 "creator": {
                     "type": "string",
@@ -1777,7 +1777,7 @@
                 },
                 "signatureValue": {
                     "type": "string",
-                    "default": "Z27E7YPvXRNw84L1T1PYjDt/R1rKitlo3X9yNzZPhqaIPZC0RFMqP4EiFoUmE3vYWIj1Uv3qvV+4dQR2d+DakA8ySdRgDCgUa/x04zLZKVy0lZH97fA2/IvvPm3XkBHpUFnWV5p5mDbUuKIJhwEM0ydMrS6DnbTFJKp0J1pttoHGIwVoU8rXJ9LzWE+rFhvzVk48vgiSAqVP1HtH72hvpThpaYu3qCrRl5rLVHbZ8kkbCnxNJUFb++ErvMQ2Ywrsn4BXBZbVba9rAvJUuwbQsdyKONjoVtF4xo3ec6jtgK7/lcirZ8ukkBG7VKxBgaa912mtcpUfg3Ik167MsnvgTX6hwcPD3Cyflpv1+BRM7ShW5po0kgTS4V8VP0C/bjgH3NwwK9Vkz39glWfxF8NOvrlPxzqFMdgVVoaIt+blYVAehz2d9At0YkZCxrZj6jSYxlqoTTPyKkmq1XdErPG67wn0nqfExsXn2CWIYVoFsY1jyGGtBo9Hk5zVEpcblg/acQO4Zvc6ERRWOVeaCxt6wwABUo2hm3L894EVLNCrftT3KEf0AG3RY0MeN1eSUQJbf80vsNxEeytI7wP/qi7RR+FGlmmj8tuH6J+fCL+hV8O4yFSNesOnxXt8diPTpV2UhoeNk4/BlhbgMgSnJ08XqudeoqSNqK+aj25R1hwA7v8="
+                    "default": "MPl93Lx80akHdmLEi9fQdAE+XjE1hAHl4joerXLe1/5NPZpA8fFCHCWAbedcaovwHq9Ovdyw4Obatn/AWbezBrY6yswxLWUpzE0ueMeoEwaz/bKZaI7Gz20/mS22G13Ry1SGxGqx73L5nvz2gKMJwWXmWAUaqL/Jj/teH82hA/jyOSYi1WBmYay0cTbroi448UsXQa2inXWOJe280Tsye4N5NnkknYe4XLK8dPOYbOwjCHPYPIqLWixSwTFoVp82zFrwcRDx6Wnw/xoHR7a3Qr1QH/nWQm5hp0WajRcQMw16/RiwHFzXoAO9IUW79CwyAU42hWYEAcn23GZtk9LOp5q2OybZJz8I6qD8lfp70TgWTXuCBpUU5O5FHl8vms9SR+Q/WaGLdthc/39J03xo6K/EbuJWFzL1hilhs9v7VL1UbB8KG9wKsWZcKPkkNdxTick31dEJ1hNksH0mSrDsFIC8rmF0UFYpu9G2jnKq+Gq6DnkfbBUaY+XoYv1JNpkRtsqUnknitsPf00cKC7EyMs+Vpfq7F7YAyHocHDlE1FURsY68vp7daXi/7oq3s6VWrupmdHxHFCNAF/LPbZTIPpxdPc7/4+LMfA9Bj5tmapC2IHM6nh0OziVKZL9FsUznddLJnZs0LKuEpn8JlOu+yRG6kNyjfHjhqby5aiXamuE="
                 }
             },
             "required": [
@@ -1794,9 +1794,9 @@
         "signature"
     ]
 }</msg>
-<status status="PASS" starttime="20200831 09:28:42.641" endtime="20200831 09:28:42.653"></status>
+<status status="PASS" starttime="20200831 10:00:04.764" endtime="20200831 10:00:04.777"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.313" endtime="20200831 09:28:42.653"></status>
+<status status="PASS" starttime="20200831 10:00:04.270" endtime="20200831 10:00:04.777"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1807,7 +1807,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.653" endtime="20200831 09:28:42.654"></status>
+<status status="PASS" starttime="20200831 10:00:04.777" endtime="20200831 10:00:04.778"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1816,9 +1816,9 @@
 <doc>*Asserts the field as JSON string.*</doc>
 <arguments>
 <arg>response body @context</arg>
-<arg>https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/</arg>
+<arg>https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.654" endtime="20200831 09:28:42.655"></status>
+<status status="PASS" starttime="20200831 10:00:04.778" endtime="20200831 10:00:04.779"></status>
 </kw>
 <kw name="Object" library="REST">
 <tags>
@@ -1828,7 +1828,7 @@
 <arguments>
 <arg>response body data</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.655" endtime="20200831 09:28:42.657"></status>
+<status status="PASS" starttime="20200831 10:00:04.779" endtime="20200831 10:00:04.781"></status>
 </kw>
 <kw name="Array" library="REST">
 <tags>
@@ -1838,7 +1838,7 @@
 <arguments>
 <arg>response body data forecasts</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.657" endtime="20200831 09:28:42.659"></status>
+<status status="PASS" starttime="20200831 10:00:04.781" endtime="20200831 10:00:04.783"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1849,7 +1849,7 @@
 <arg>response body data forecasts 0 @type</arg>
 <arg>ForecastElectricityPriceMWH</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.659" endtime="20200831 09:28:42.660"></status>
+<status status="PASS" starttime="20200831 10:00:04.783" endtime="20200831 10:00:04.784"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1860,7 +1860,7 @@
 <arg>response body data forecasts 0 period</arg>
 <arg>07.06.2020/09.06.2020</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.660" endtime="20200831 09:28:42.661"></status>
+<status status="PASS" starttime="20200831 10:00:04.784" endtime="20200831 10:00:04.785"></status>
 </kw>
 <kw name="Array" library="REST">
 <tags>
@@ -1870,7 +1870,7 @@
 <arguments>
 <arg>response body data forecasts 0 pricePlans</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.661" endtime="20200831 09:28:42.663"></status>
+<status status="PASS" starttime="20200831 10:00:04.785" endtime="20200831 10:00:04.787"></status>
 </kw>
 <kw name="Object" library="REST">
 <tags>
@@ -1881,7 +1881,7 @@
 <arg>response body data forecasts 0 pricePlans 0</arg>
 <arg>{"@type": "pricePlan","currency": "EUR","period": "07.06.2020T22:00/1h","rate": 3.68}</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.663" endtime="20200831 09:28:42.664"></status>
+<status status="PASS" starttime="20200831 10:00:04.787" endtime="20200831 10:00:04.788"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1892,7 +1892,7 @@
 <arg>response body data forecasts 0 pricePlans 0 @type</arg>
 <arg>pricePlan</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.665" endtime="20200831 09:28:42.665"></status>
+<status status="PASS" starttime="20200831 10:00:04.789" endtime="20200831 10:00:04.789"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1903,7 +1903,7 @@
 <arg>response body data forecasts 0 pricePlans 0 currency</arg>
 <arg>EUR</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.666" endtime="20200831 09:28:42.666"></status>
+<status status="PASS" starttime="20200831 10:00:04.790" endtime="20200831 10:00:04.790"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1914,7 +1914,7 @@
 <arg>response body data forecasts 0 pricePlans 0 period</arg>
 <arg>07.06.2020T22:00/1h</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.667" endtime="20200831 09:28:42.667"></status>
+<status status="PASS" starttime="20200831 10:00:04.791" endtime="20200831 10:00:04.791"></status>
 </kw>
 <kw name="Number" library="REST">
 <tags>
@@ -1925,11 +1925,11 @@
 <arg>response body data forecasts 0 pricePlans 0 rate</arg>
 <arg>3.68</arg>
 </arguments>
-<status status="PASS" starttime="20200831 09:28:42.668" endtime="20200831 09:28:42.668"></status>
+<status status="PASS" starttime="20200831 10:00:04.792" endtime="20200831 10:00:04.792"></status>
 </kw>
-<status status="PASS" starttime="20200831 09:28:42.308" endtime="20200831 09:28:42.669" critical="yes"></status>
+<status status="PASS" starttime="20200831 10:00:04.265" endtime="20200831 10:00:04.793" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200831 09:28:41.432" endtime="20200831 09:28:42.669"></status>
+<status status="PASS" starttime="20200831 10:00:03.510" endtime="20200831 10:00:04.793"></status>
 </suite>
 <statistics>
 <total>

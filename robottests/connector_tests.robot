@@ -8,8 +8,8 @@ Library           REST         ${POT_API_URL}
 
 *** Variables ***
 ${POT_API_URL}               http://localhost:8080
-# ${APP_TOKEN}                 %{APP_TOKEN}
-# ${CLIENT_SECRET}             %{CLIENT_SECRET}
+${APP_TOKEN}                 %{APP_TOKEN}
+${CLIENT_SECRET}             %{CLIENT_SECRET}
 ${PRODUCT_CODE}              entsoe-electricity-price-product-code
 ${TIMESTAMP}                 2018-11-01T12:00:00+00:00
 ${PERIOD}                    2020-06-08T13:00Z/2020-06-09T22:00Z
@@ -45,7 +45,7 @@ fetch, 200
     ${body}                 Get Body
     Fetch Data Product      ${body}
     Integer                 response status                                         200
-    String                  response body @context                                  https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/
+    String                  response body @context                                  https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/
     Object                  response body data
     Array                   response body data forecasts
     String                  response body data forecasts 0 @type                    ForecastElectricityPriceMWH
@@ -91,7 +91,7 @@ fetch, 200, period's first time parameter is bigger than second
     ${body}=             evaluate        json.dumps(${body})                        json
     Fetch Data Product     ${body}
     Integer                 response status                                         200
-    String                  response body @context                                  https://standards.oftrust.net/v2/Context/DataProductParameters/Forecast/Price/Electricity/
+    String                  response body @context                                  https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/
     Object                  response body data
     Array                   response body data forecasts
     String                  response body data forecasts 0 @type                    ForecastElectricityPriceMWH

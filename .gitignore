@@ -11,3 +11,7 @@ yarn.lock
 .idea
 .env
 .DS_Store
+
+docker-compose.yml
+docker-variable.env
+dockerfile.dev

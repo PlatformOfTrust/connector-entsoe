@@ -13,11 +13,4 @@ module.exports.app = function (app, passport) {
 
     /** Translator endpoints. */
     app.use('/translator/', require('./translator/index')(passport));
-
-    /** Default endpoint. */
-    app.use('', function (req, res) {
-        return res.json({
-            message: 'Hello there!',
-        });
-    });
 };

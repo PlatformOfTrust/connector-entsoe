@@ -47,6 +47,9 @@ const getDate = (ISOString) => {
  * @return {Object}
  */
 const parameters = async (config, parameters) => {
+	if (typeof parameters.period === 'object') {
+		parameters.period = parameters.period.toString()
+	}
 	let time = parameters.period
 	time = time.split("/")
 	let startTime = Date.parse(time[0])

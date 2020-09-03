@@ -14,6 +14,7 @@ ${PRODUCT_CODE}              entsoe-electricity-price-product-code
 ${TIMESTAMP}                 2018-11-01T12:00:00+00:00
 ${PERIOD}                    2020-06-08T13:00Z/2020-06-09T22:00Z
 ${PERIOD_SWAP}               2020-06-09T22:00Z/2020-06-08T13:00Z
+@{PERIOD_ARRAY}              2020-06-08T13:00Z/2020-06-09T22:00Z
 ${TARGETOBJECT}              10YFI-1--------U
 ${PRODUCTCODE}               entsoe-electricity-price-product-code
 &{BROKER_BODY_PARAMETERS}    period=${PERIOD}
@@ -88,6 +89,25 @@ fetch, 200, period's first time parameter is bigger than second
     ${body}                Get Body
     ${body}=             evaluate        json.loads('''${body}''')                  json
     Set To Dictionary      ${body["parameters"]}                                    period=${PERIOD_SWAP}
+    ${body}=             evaluate        json.dumps(${body})                        json
+    Fetch Data Product     ${body}
+    Integer                 response status                                         200
+    String                  response body @context                                  https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/
+    Object                  response body data
+    Array                   response body data forecasts
+    String                  response body data forecasts 0 @type                    ForecastElectricityPriceMWH
+    String                  response body data forecasts 0 period                   07.06.2020/09.06.2020
+    Array                   response body data forecasts 0 pricePlans
+    Object                  response body data forecasts 0 pricePlans 0             {"@type": "pricePlan","currency": "EUR","period": "07.06.2020T22:00/1h","rate": 3.68}
+    String                  response body data forecasts 0 pricePlans 0 @type       pricePlan
+    String                  response body data forecasts 0 pricePlans 0 currency    EUR
+    String                  response body data forecasts 0 pricePlans 0 period      07.06.2020T22:00/1h
+    Number                  response body data forecasts 0 pricePlans 0 rate        3.68
+
+fetch, 200, period is array 
+    ${body}                Get Body
+    ${body}=             evaluate        json.loads('''${body}''')                  json
+    Set To Dictionary      ${body["parameters"]}                                    period=${PERIOD_ARRAY}
     ${body}=             evaluate        json.dumps(${body})                        json
     Fetch Data Product     ${body}
     Integer                 response status                                         200

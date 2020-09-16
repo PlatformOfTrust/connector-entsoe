@@ -22,30 +22,39 @@ GREENLOCK_DOMAIN=www.example.com
 GREENLOCK_MAINTANER=info@example.com
 ```
 
-## Building
+## API key
+
+API key is required from entsoe to work. Located in config/entsoe-electricity-price-product-code.json: 
 
 ```
-docker build -t konsta2106/entsoe-electricity-price .
+"securityToken": "<securityToken>"
 ```
 
-## Encrypting configs
+## Building docker image
+
+```
+docker build -t entsoe-connector .
+```
+
+## Encrypting config files
 
 Command to encrypt config.json:
 
 ```
 npm run generate
 ```
+Output can be found at /temp folder
 
 ## Basic running
 
 ```
-docker run -p 8080:8080 -d konsta2106/entsoe-electricity-price
+docker run -p 8080:8080 -d entsoe-connector
 ```
 
 ## Running with encrypted env variables
 
 ```
-docker run -e CONFIGS -p 8080:8080 -d konsta2106/entsoe-electricity-price
+docker run -e CONFIGS=<encrypted value> -p 8080:8080 -d entsoe-connector
 
 ```
 ## Request body example

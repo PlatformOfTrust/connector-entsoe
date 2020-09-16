@@ -24,7 +24,7 @@ GREENLOCK_MAINTANER=info@example.com
 
 ## API key
 
-API key is required from entsoe to work. Located in config/entsoe-electricity-price-product-code.json: 
+API key is required from https://transparency.entsoe.eu/ to work. Put in config/entsoe-electricity-price-product-code.json: 
 
 ```
 "securityToken": "<securityToken>"

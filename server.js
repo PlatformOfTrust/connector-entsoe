@@ -24,7 +24,10 @@ app.use(compression());
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-// Disable HTTP Header Fingerprinting
+// Enable reverse proxy support.
+app.enable('trust proxy');
+
+// Disable HTTP Header Fingerprinting.
 app.disable('x-powered-by');
 
 // Configure passport.

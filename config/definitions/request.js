@@ -1,7 +1,4 @@
 "use strict";
-
-const { parameters } = require("../plugins/entsoe");
-
 /**
  * Broker request definitions.
  */
@@ -19,9 +16,7 @@ const definitions = {
     IDS: 'parameters.ids',
     START: 'parameters.startTime',
     END: 'parameters.endTime',
-    DATA_TYPES:  'parameters.dataTypes',
-    targetObject: 'parameters.targetObject',
-    period: 'parameters.period'
+    DATA_TYPES:  'parameters.dataTypes'
 };
 
 /** List of supported headers, and if they're required or not. */
@@ -50,12 +45,6 @@ const supportedParameters = {
     },
     [definitions.IDS]: {
         required: false
-    },
-    [definitions.targetObject]: {
-        required: true
-    },
-    [definitions.period]: {
-        required: true
     },
     [definitions.START]: {
         required: false

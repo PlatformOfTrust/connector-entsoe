@@ -31,7 +31,6 @@ const {
 
 /** Import platform of trust response definitions. */
 const {
-    CONTEXT,
     defaultOutput
 } = require('../../config/definitions/response');
 
@@ -154,7 +153,7 @@ function loadJSON(collection, string) {
         const object = JSON.parse(Buffer.from(string, 'base64').toString('utf8'));
         for (let i = 0; i < Object.keys(object).length; i++) {
             const filename = Object.keys(object)[i];
-            handleFile('configs', filename, JSON.stringify(object[filename]));
+            handleFile(collection, filename, JSON.stringify(object[filename]));
             winston.log('info', 'Loaded from environment ' + collection + '/' + filename + '.');
         }
     } catch (err) {
@@ -412,32 +411,18 @@ const interpretMode = function (config, parameters) {
  * Consumes described resources.
  *
  * @param {Object} reqBody
- * @return {Array}
- *   Data array.
+ * @return {Object}
+ *   Data object.
  */
 const getData = async (reqBody) => {
-    /** Parameter validation */
-    const validation = validator.validate(reqBody, supportedParameters);
+    /** Default request validation */
+    let validation = validator.validate(reqBody, supportedParameters);
     if (Object.hasOwnProperty.call(validation, 'error')) {
         if (validation.error) return rest.promiseRejectWithError(422, validation.error);
     }
 
-    // Pick supported parameters from reqBody.
+    // Pick requested product code.
     const productCode = _.get(reqBody, PRODUCT_CODE) || 'default';
-    const timestamp = parseTs(_.get(reqBody, TIMESTAMP) || moment.now());
-    let parameters = {
-        ids: _.uniq(_.get(reqBody, IDS) || []),
-        start: parseTs(_.get(reqBody, START)),
-        end: parseTs(_.get(reqBody, END) || timestamp),
-        dataTypes: _.uniq(_.get(reqBody, DATA_TYPES) || []),
-    };
-
-    // Leave unsupported parameters untouched.
-    _.unset(reqBody, IDS);
-    _.unset(reqBody, START);
-    _.unset(reqBody, END);
-    _.unset(reqBody, DATA_TYPES);
-    parameters = {...parameters, ..._.get(reqBody, PARAMETERS) || {}};
 
     // Get data product config.
     let config = cache.getDoc('configs', productCode);
@@ -450,6 +435,55 @@ const getData = async (reqBody) => {
     // Get data product config template.
     let template = cache.getDoc('templates', config.template);
     if (!template) return rest.promiseRejectWithError(404, 'Data product config template not found.');
+
+    /* Custom requirements */
+    let requiredParameters;
+
+    // Check for required input request parameters from template.
+    if (Object.hasOwnProperty.call(template, 'input')) {
+        if (Object.hasOwnProperty.call(template.input, 'required')) {
+            if (Array.isArray(template.input.required)) {
+                requiredParameters = _.uniq(template.input.required).map((path) => {
+                    return {[path.toString()]: {required: true}}
+                }).reduce(function (r, c) {
+                    return Object.assign(r, c);
+                }, {})
+            }
+        }
+    }
+
+    // If required parameters are not defined in template. Set IDS parameter required by default.
+    if (!requiredParameters) {
+        requiredParameters = {[IDS]: {required: true}}
+    }
+
+    /** Validation of data product specific parameters */
+    validation = validator.validate(reqBody, requiredParameters || {});
+    if (Object.hasOwnProperty.call(validation, 'error')) {
+        if (validation.error) return rest.promiseRejectWithError(422, validation.error);
+    }
+
+    // Pick supported parameters from reqBody.
+    const timestamp = parseTs(_.get(reqBody, TIMESTAMP) || moment.now());
+    let parameters = {
+        ids: _.get(reqBody, IDS) || [],
+        start: parseTs(_.get(reqBody, START)),
+        end: parseTs(_.get(reqBody, END) || timestamp),
+        dataTypes: _.uniq(_.get(reqBody, DATA_TYPES) || []),
+    };
+
+    // Make sure ids is an array and remove duplicates.
+    if (!Array.isArray(parameters.ids)) {
+        parameters.ids = [parameters.ids];
+    }
+    parameters.ids = _.uniq(parameters.ids);
+
+    // Leave unsupported parameters untouched.
+    _.unset(reqBody, IDS);
+    _.unset(reqBody, START);
+    _.unset(reqBody, END);
+    _.unset(reqBody, DATA_TYPES);
+    parameters = {...parameters, ..._.get(reqBody, PARAMETERS) || {}};
 
     // Template identifies connector settings for multiple configs.
     // ProductCode identifies requested data product.
@@ -506,6 +540,19 @@ const getData = async (reqBody) => {
     // Initialize items array.
     let items = [];
 
+    // Initialize output definitions.
+    template.output = template.output || {};
+    template.output = {
+        contextValue: template.output.contextValue || defaultOutput.contextValue,
+        context: template.output.context || defaultOutput.context,
+        object: template.output.object || defaultOutput.object,
+        array: template.output.array || defaultOutput.array,
+        value: template.output.value || defaultOutput.value,
+        type: template.output.type || defaultOutput.type,
+        data: template.output.data || defaultOutput.data,
+        id: template.output.id || defaultOutput.id,
+    };
+
     // Check that a protocol is defined.
     if (!Object.hasOwnProperty.call(template, 'protocol')) {
         return rest.promiseRejectWithError(500, 'Connection protocol not defined.');
@@ -519,11 +566,16 @@ const getData = async (reqBody) => {
         }
     }
 
+    // Set output key names.
+    const CONTEXT = _.get(template, 'output.context');
+    const OBJECT = _.get(template, 'output.object');
+    const ARRAY = _.get(template, 'output.array');
+
     // Compose output payload.
     let output = {
-        [CONTEXT]: _.get(template, 'pot.context') || defaultOutput.context,
-        [_.get(template, 'pot.object') || defaultOutput.object]: {
-            [_.get(template, 'pot.array') || defaultOutput.array]: _.flatten(items)
+        [CONTEXT]: _.get(template, 'output.contextValue'),
+        [OBJECT]: {
+            [ARRAY]: _.flatten(items)
         }
     };
 
@@ -534,7 +586,11 @@ const getData = async (reqBody) => {
         }
     }
 
-    return Promise.resolve(output);
+    // Return output and payload key name separately for signing purposes.
+    return Promise.resolve({
+        output,
+        payloadKey: OBJECT
+    });
 };
 
 /**

@@ -134,4 +134,3 @@ fetch, 200, wrong product code
     String                  response body @context                                  https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/
     Object                  response body data
     Array                   response body data forecasts
-    Output                response

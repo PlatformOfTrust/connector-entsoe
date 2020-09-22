@@ -36,10 +36,13 @@ module.exports.fetch = async (req, res) => {
 
         // Send signed data response.
         return res.status(200).send({
-            ...result,
+            ...(result.output || {}),
             signature: {
                 ...signature,
-                signatureValue: rsa.generateSignature({...result, __signed__: signature.created})
+                signatureValue: rsa.generateSignature({
+                    __signed__: signature.created,
+                    ...(result.output[result.payloadKey || 'data'] || {})
+                })
             }
         });
     } catch (err) {

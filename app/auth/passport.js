@@ -47,7 +47,7 @@ module.exports = function (passport) {
             }
 
             /** Signature validation */
-            let verified = false;
+            let verified = true;
             let environment;
             let publicKeys = (cache.getDocs('publicKeys') || []).sort((a, b) => (a.priority > b.priority) ? 1 : -1);
 

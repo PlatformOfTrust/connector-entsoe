@@ -1,27 +1,26 @@
 "use strict";
 /**
- * Response definitions.
+ * Connector response definitions.
  */
-const definitions = {
-    CONTEXT: '@context',
-    TIMESTAMP: 'timestamp',
-    DATA: 'measurements',
-    VALUE: 'value',
-    TYPE: '@type',
-    ID: 'id',
-};
 
-/** Default output definitions. */
+/** List of default output keys and values. */
 const defaultOutput = {
-    context: 'https://standards-ontotest.oftrust.net/v2/Context/DataProductParameters/Sensor/',
+    /** Body */
+    contextValue: 'https://standards.oftrust.net/v2/Context/DataProductOutput/Sensor/',
+    context: '@context',
     object: 'data',
-    array: 'sensors'
+    /** Payload */
+    timestamp: 'timestamp',
+    data: 'measurements',
+    array: 'sensors',
+    value: 'value',
+    type: '@type',
+    id: 'id'
 };
 
 /**
  * Expose definitions.
  */
 module.exports = {
-    ...definitions,
     defaultOutput
 };

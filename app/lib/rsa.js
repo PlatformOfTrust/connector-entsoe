@@ -2,6 +2,7 @@
 /**
  * Module dependencies.
  */
+const _ = require('lodash');
 const crypto = require('crypto');
 const cache = require('../cache');
 const request = require('request');
@@ -77,6 +78,33 @@ const sendPublicKey = function (req, res) {
 };
 
 /**
+ * Sorts object recursively.
+ *
+ * @param {Object} object
+ * @return {Object}
+ *   Sorted object.
+ */
+const sortObject = function (object) {
+    let sortedObj = {};
+    let keys = _.keys(object);
+
+    // Sort keys.
+    keys = _.sortBy(keys, key => key);
+
+    // Iterate sub objects.
+    _.each(keys, key => {
+        if (typeof object[key] == 'object' && !(object[key] instanceof Array)) {
+            /** Recursion. */
+            sortedObj[key] = sortObject(object[key]);
+        } else {
+            sortedObj[key] = object[key];
+        }
+    });
+
+    return sortedObj;
+}
+
+/**
  * Stringifies body object.
  *
  * @param {Object} body
@@ -84,24 +112,11 @@ const sendPublicKey = function (req, res) {
  *   Stringified body.
  */
 const stringifyBody = function (body) {
-    // Sort request body.
-    const sortedBody = {};
-    Object.keys(body).sort().forEach(k => {
-        sortedBody[k] = body[k]
-    });
-
-    if (Object.hasOwnProperty.call(body, 'parameters')) {
-        const sortedParameters = {};
-        Object.keys(body.parameters).sort().forEach(k => {
-            sortedParameters[k] = body.parameters[k]
-        });
-        sortedBody.parameters = sortedParameters;
-    }
-
-    // Return string.
-    return JSON.stringify(sortedBody)
+    // Stringify sorted object.
+    return JSON.stringify(sortObject(body))
         .replace(/[\u007F-\uFFFF]/g, chr => '\\u' + ('0000' + chr.charCodeAt(0)
-            .toString(16)).substr(-4)).replace(new RegExp('":', 'g'), '": ');
+            .toString(16)).substr(-4)).replace(new RegExp('":', 'g'), '": ')
+        .trim();
 };
 
 /**
@@ -110,9 +125,9 @@ const stringifyBody = function (body) {
  * @param {Object} body
  *   The payload to sign.
  * @param {String} [key]
- *   Private key.
- * @return {Object}
- *   The signature object.
+ *   Private key used for signing.
+ * @return {String}
+ *   The signature value.
  */
 const generateSignature = function (body, key) {
     // Use local private key, if not given.
@@ -126,10 +141,11 @@ const generateSignature = function (body, key) {
         signatureValue = crypto
             .createSign('sha256')
             .update(stringifyBody(body))
-            .sign({key, padding: crypto.constants.RSA_PKCS1_PSS_PADDING}, 'base64');
+            .sign(key.toString(), 'base64');
     } catch (err) {
         winston.log('error', err.message);
     }
+
     return signatureValue;
 };
 
@@ -140,12 +156,15 @@ const generateSignature = function (body, key) {
  *   Payload to validate.
  * @param {String} signature
  *   Signature to validate.
- * @param {String/Object} publicKey
+ * @param {String/Object} [key]
  *   Public key used for validation.
  * @return {Boolean}
  *   True if signature is valid, false otherwise.
  */
-const verifySignature = function (body, signature, publicKey) {
+const verifySignature = function (body, signature, key) {
+    // Use local public key, if not given.
+    if (!key) key = publicKey;
+
     // Initialize verifier.
     const verifier = crypto.createVerify('sha256');
 
@@ -153,7 +172,7 @@ const verifySignature = function (body, signature, publicKey) {
     verifier.update(stringifyBody(body));
 
     // Verify base64 encoded SHA256 signature.
-    return verifier.verify(publicKey, signature, 'base64')
+    return verifier.verify(key, signature, 'base64');
 };
 
 /**

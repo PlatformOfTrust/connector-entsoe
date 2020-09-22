@@ -17,6 +17,7 @@ ${PERIOD_SWAP}               2020-06-09T22:00Z/2020-06-08T13:00Z
 @{PERIOD_ARRAY}              2020-06-08T13:00Z/2020-06-09T22:00Z
 ${TARGETOBJECT}              10YFI-1--------U
 ${PRODUCTCODE}               entsoe-electricity-price-product-code
+${PRODUCTCODE_WRONG}         entsoe-test
 &{BROKER_BODY_PARAMETERS}    period=${PERIOD}
 ...                          targetObject=${TARGETOBJECT}
 &{BROKER_BODY}               timestamp=${TIMESTAMP}
@@ -122,3 +123,15 @@ fetch, 200, period is array
     String                  response body data forecasts 0 pricePlans 0 currency    EUR
     String                  response body data forecasts 0 pricePlans 0 period      07.06.2020T22:00/1h
     Number                  response body data forecasts 0 pricePlans 0 rate        3.68
+
+fetch, 200, wrong product code
+    ${body}                Get Body
+    ${body}=             evaluate        json.loads('''${body}''')                  json
+    Set To Dictionary      ${body}                                                  productCode=${PRODUCTCODE_WRONG}
+    ${body}=             evaluate        json.dumps(${body})                        json
+    Fetch Data Product     ${body}
+    Integer                 response status                                         200
+    String                  response body @context                                  https://standards.oftrust.net/v2/Context/DataProductOutput/Forecast/Price/Electricity/
+    Object                  response body data
+    Array                   response body data forecasts
+    Output                response

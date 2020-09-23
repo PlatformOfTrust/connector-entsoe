@@ -31,7 +31,7 @@ module.exports.fetch = async (req, res) => {
         let signature = {
             type: 'RsaSignature2018',
             created: moment().format(),
-            creator: req.protocol + '://' + req.get('host') + '/entsoe/translator/v1/public.key',
+            creator: 'https' + '://' + req.get('host') + '/entsoe/translator/v1/public.key',
         };
 
         // Send signed data response.
